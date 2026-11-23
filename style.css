@@ -1,0 +1,271 @@
+/* ibnu zidan
+    250302045
+    pert10*/
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    background: #f4f6fa;
+    color: #222b3a;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0 0 20px;
+    color: #1f3864;
+    font-size: 26px;
+}
+
+/* ---------- Toolbar: pencarian + tombol tambah ---------- */
+.toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.form-cari {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    flex: 1 1 320px;
+    max-width: 520px;
+}
+
+.form-cari input[type="search"] {
+    flex: 1 1 200px;
+    padding: 9px 12px;
+    border: 1px solid #dde3ee;
+    border-radius: 6px;
+    font-size: 15px;
+    background: #fff;
+}
+
+.form-cari input[type="search"]:focus {
+    outline: 2px solid #1f3864;
+    outline-offset: 1px;
+    border-color: #1f3864;
+}
+
+.btn {
+    display: inline-block;
+    padding: 9px 16px;
+    border: 0;
+    border-radius: 6px;
+    background: #1f3864;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:hover { background: #162a4d; }
+
+.btn-abu {
+    background: #fff;
+    color: #222b3a;
+    border: 1px solid #dde3ee;
+}
+
+.btn-abu:hover { background: #eef1f7; }
+
+.btn-bahaya { background: #c0392b; }
+.btn-bahaya:hover { background: #a02f23; }
+
+.btn-kecil { padding: 5px 12px; font-size: 13px; }
+
+.btn:focus-visible {
+    outline: 2px solid #1f3864;
+    outline-offset: 2px;
+}
+
+/* ---------- Info hasil ---------- */
+.info {
+    margin: 0 0 12px;
+    color: #6b7587;
+    font-size: 14px;
+}
+
+.info strong { color: #222b3a; }
+
+/* ---------- Tabel ---------- */
+.tabel-wrap {
+    overflow-x: auto;
+    background: #fff;
+    border: 1px solid #dde3ee;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 760px;
+}
+
+th, td {
+    padding: 12px 14px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid #dde3ee;
+}
+
+thead th {
+    background: #1f3864;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+tbody tr:nth-child(even) { background: #f8f9fc; }
+tbody tr:hover { background: #eaf0fb; }
+tbody tr:last-child td { border-bottom: 0; }
+
+td.no { width: 50px; color: #6b7587; }
+
+.aksi {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    white-space: nowrap;
+}
+
+form.inline { display: inline; margin: 0; }
+
+/* ---------- Data kosong ---------- */
+.kosong {
+    padding: 40px 16px;
+    text-align: center;
+    color: #6b7587;
+}
+
+mark {
+    background: #fff1a8;
+    padding: 0 2px;
+    border-radius: 2px;
+}
+
+/* ---------- Halaman index ---------- */
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.menu-item {
+    display: block;
+    padding: 24px;
+    background: #fff;
+    border: 1px solid #dde3ee;
+    border-left: 5px solid #1f3864;
+    border-radius: 8px;
+    color: #222b3a;
+    text-decoration: none;
+}
+
+.menu-item:hover { background: #eaf0fb; }
+
+.menu-item:focus-visible {
+    outline: 2px solid #1f3864;
+    outline-offset: 2px;
+}
+
+.menu-item h2 {
+    margin: 0 0 6px;
+    color: #1f3864;
+    font-size: 18px;
+}
+
+.menu-item p {
+    margin: 0;
+    color: #6b7587;
+    font-size: 14px;
+}
+
+.deskripsi { margin: 0; color: #6b7587; }
+/* ---------- Form pendaftaran ---------- */
+form:not(.form-cari):not(.inline) {
+    max-width: 440px;
+    margin-top: 20px;
+    padding: 24px;
+    background: #fff;
+    border: 1px solid #dde3ee;
+    border-radius: 8px;
+}
+
+form:not(.form-cari):not(.inline) label {
+    display: block;
+    margin: 16px 0 6px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+form:not(.form-cari):not(.inline) label:first-child { margin-top: 0; }
+
+input[type="text"],
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 9px 12px;
+    border: 1px solid #dde3ee;
+    border-radius: 6px;
+    background: #fff;
+    color: #222b3a;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+textarea { resize: vertical; }
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #1f3864;
+    outline-offset: 1px;
+    border-color: #1f3864;
+}
+
+form:not(.form-cari):not(.inline) button[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+form:not(.form-cari):not(.inline) button[type="submit"]:hover {
+    background-color: #162a4d !important;
+}
+
+/* ---------- Pesan sukses / gagal ---------- */
+.sukses,
+.gagal {
+    max-width: 440px;
+    margin: 0 0 16px;
+    padding: 10px 14px;
+    border-radius: 6px;
+}
+
+.sukses {
+    background: #e6f4ea;
+    border-left: 5px solid #2e7d32;
+    color: #1e5c24;
+}
+
+.gagal {
+    background: #fdecea;
+    border-left: 5px solid #c0392b;
+    color: #8f2a1f;
+}
