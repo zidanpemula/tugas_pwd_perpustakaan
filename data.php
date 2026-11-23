@@ -4,11 +4,11 @@
 <?php
 require_once "koneksi.php";
 
-// Kata kunci pencarian (dari URL: data.php?q=...)
+
 $q = isset($_GET["q"]) ? trim($_GET["q"]) : "";
 
 if ($q !== "") {
-    // Escape karakter khusus LIKE agar % dan _ dianggap teks biasa
+    
     $q_aman = str_replace(array("\\", "%", "_"), array("\\\\", "\\%", "\\_"), $q);
     $kata   = "%" . $q_aman . "%";
 
