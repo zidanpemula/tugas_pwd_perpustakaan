@@ -14,11 +14,11 @@ if ($q !== "") {
 
     $sql = "SELECT id, no_anggota, nama_lengkap, email, no_hp, jenis_anggota, alamat
             FROM anggota
-            WHERE no_anggota LIKE ? OR nama_lengkap LIKE ? OR email LIKE ?
-               OR no_hp LIKE ? OR jenis_anggota LIKE ? OR alamat LIKE ?
+            WHERE no_anggota LIKE ? OR nama_lengkap LIKE ?
+               OR email LIKE ? OR alamat LIKE ?
             ORDER BY id DESC";
     $stmt = mysqli_prepare($koneksi, $sql);
-    mysqli_stmt_bind_param($stmt, "ssssss", $kata, $kata, $kata, $kata, $kata, $kata);
+    mysqli_stmt_bind_param($stmt, "ssss", $kata, $kata, $kata, $kata);
     mysqli_stmt_execute($stmt);
     $hasil = mysqli_stmt_get_result($stmt);
 } else {
